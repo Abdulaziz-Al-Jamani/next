@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./styles/style.scss";
+//push -u origin next
 import Carousel from "./componts/Carousel";
 import AboutUs from "./componts/AboutUs";
 import OurWorks from "./componts/OurWorks";

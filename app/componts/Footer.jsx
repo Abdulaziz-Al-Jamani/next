@@ -11,7 +11,7 @@ import "../styles/style.scss";
 // - dir: 'rtl' | 'ltr' (defaults to 'rtl')
 
 export default function Footer({
-  logo = <span className="text-xl font-bold">ابـي عبدالعزيز</span>,
+  logo = <img src="/imgs/logo.png" alt="Logo" width={200} />,
   links = [
     { title: "الرئيسية", href: "/" },
     { title: "عنّا", href: "/about" },
@@ -28,7 +28,7 @@ export default function Footer({
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 flex-wrap">
           <div className="flex items-center gap-4 ">
-            <div className="w-60 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-600 to-amber-800 text-white shadow-lg">
+            <div className="w-60 h-12 flex items-center justify-center rounded-xl ">
               {logo}
             </div>
             <div>
