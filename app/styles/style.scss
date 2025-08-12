@@ -1,18 +1,26 @@
-// sass --watch app/styles/style.scss:app/styles/style.css
-@import "./var";
+@use "./var" as *;
+
 .filter {
   backdrop-filter: blur(10px); /* الضبابية */
   background-color: rgba(255, 213, 0, 0.567);
   -webkit-backdrop-filter: blur(10px); /* دعم سفاري */
+}
+.oapn {
+  background-color: rgba(255, 213, 0, 0.567); /* اللون الأساسي */
+  background-image: linear-gradient(#ffcc007f 1px, transparent 1px),
+    linear-gradient(90deg, #ffcc007f 1px, transparent 1px);
+  background-size: 15px 15px; /* حجم المربعات */
 }
 body {
   background-color: $color-1; /* لون الخلفية الأساسي */
   background-image: radial-gradient(#000 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
 .me-dir {
   direction: rtl;
 }
+
 #me-sned {
   font-family: inherit;
   font-size: 18px;
@@ -23,7 +31,7 @@ body {
   justify-content: center;
   border: none;
   border-radius: 25px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
 

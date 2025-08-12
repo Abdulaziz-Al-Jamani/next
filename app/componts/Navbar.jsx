@@ -50,17 +50,17 @@ export default function Navbar() {
           </div>
         </div>
         {open && (
-          <div className="md:hidden  px-4 pt-2 pb-3 space-y-1 filter flex-col flex items-center me-dir">
-            <Link href="/" className="block hover:text-yellow-400">
+          <div className="md:hidden  px-4 pt-2 pb-3 space-y-1 oapn flex-col flex items-center me-dir">
+            <Link href="/" className="block hover:text-amber-900">
               الرئيسية
             </Link>
-            <Link href="/about" className="block hover:text-yellow-400">
+            <Link href="/about" className="block hover:text-amber-900">
               من نحن
             </Link>
-            <Link href="/projects" className="block hover:text-yellow-400">
+            <Link href="/projects" className="block hover:text-amber-900">
               المشاريع
             </Link>
-            <Link href="/contact" className="block hover:text-yellow-400">
+            <Link href="/contact" className="block hover:text-amber-900">
               تواصل
             </Link>
           </div>

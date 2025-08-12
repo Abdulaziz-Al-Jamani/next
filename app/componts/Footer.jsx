@@ -68,10 +68,7 @@ export default function Footer({
                 className="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-white text-white dark:text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
               />
 
-              <button
-                id="me-sned"
-                className="bg-gradient-to-br from-amber-600 to-amber-800"
-              >
+              <button id="me-sned" className="bg-amber-600">
                 <div class="svg-wrapper-1">
                   <div class="svg-wrapper">
                     <svg

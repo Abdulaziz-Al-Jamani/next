@@ -55,51 +55,60 @@ export default function LatestPostsSlider() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-4xl font-bold mb-10 text-center text-amber-600">
-        أحدث التدوينات
-      </h2>
-      <div className="relative overflow-hidden rounded-lg shadow-lg">
-        <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
-        >
-          {posts.map(({ id, title, excerpt, image, href }) => (
-            <Link
-              key={id}
-              href={href}
-              className="min-w-full bg-amber-100 p-6 flex flex-col md:flex-row gap-6 me-dir no-underline hover:underline"
-            >
-              <img
-                src={image}
-                alt={title}
-                className="w-full md:w-1/3 rounded-lg object-cover h-48 md:h-auto"
-                loading="lazy"
-              />
-              <div className="md:w-2/3 flex flex-col justify-center text-gray-900">
-                <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-                <p className="duration-200">{excerpt}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+    <>
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold mb-10 text-center text-amber-600">
+          أحدث التدوينات
+        </h2>
+        <div className="relative overflow-hidden rounded-lg shadow-lg">
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
+            {posts.map(({ id, title, excerpt, image, href }) => (
+              <Link
+                key={id}
+                href={href}
+                className="min-w-full bg-amber-100 p-6 flex flex-col md:flex-row gap-6 me-dir no-underline hover:underline"
+              >
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full md:w-1/3 rounded-lg object-cover h-48 md:h-auto"
+                  loading="lazy"
+                />
+                <div className="md:w-2/3 flex flex-col justify-center text-gray-900">
+                  <h3 className="text-2xl font-semibold mb-2">{title}</h3>
+                  <p className="duration-200">{excerpt}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-        {/* أزرار التنقل */}
-        <button
-          onClick={prevSlide}
-          aria-label="السابق"
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-800 transition"
-        >
-          ‹
+          {/* أزرار التنقل */}
+          <button
+            onClick={prevSlide}
+            aria-label="السابق"
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-800 transition"
+          >
+            ‹
+          </button>
+          <button
+            onClick={nextSlide}
+            aria-label="التالي"
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-800 transition"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+      <Link href="">
+        <button class="text-xl w-32 h-12 rounded bg-amber-600 text-white relative overflow-hidden group z-10 hover:text-white duration-1000 block mx-auto">
+          <span class="absolute bg-amber-700 w-36 h-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
+          <span class="absolute bg-amber-800 w-36 h-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
+          للمزيد
         </button>
-        <button
-          onClick={nextSlide}
-          aria-label="التالي"
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-amber-600 text-white p-2 rounded-full hover:bg-amber-800 transition"
-        >
-          ›
-        </button>
-      </div>
-    </section>
+      </Link>
+    </>
   );
 }

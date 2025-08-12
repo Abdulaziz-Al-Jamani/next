@@ -1,9 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Link from "next/link";
-import "../styles/style.scss";
+import { useParams } from "next/navigation";
 
 const works = [
   {
@@ -116,67 +112,22 @@ const works = [
   },
 ];
 
-export default function Portfolio() {
-  const [filter, setFilter] = useState("الكل");
+export default function WorkDetails() {
+  const { id } = useParams();
+  const work = works.find((w) => w.id === Number(id));
 
-  useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
-  }, []);
-
-  const categories = ["الكل", ...new Set(works.map((work) => work.category))];
-  const filteredWorks =
-    filter === "الكل"
-      ? works
-      : works.filter((work) => work.category === filter);
+  if (!work) return <p className="text-center mt-10">المشروع غير موجود</p>;
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      {/* العنوان الرئيسي */}
-      <div className="text-center mb-10" data-aos="fade-up">
-        <h1 className="text-4xl font-bold mb-3">أعمالنا</h1>
-        <p className="text-gray-600">
-          مجموعة من أحدث مشاريعنا في التصميم، البرمجة، التسويق، والتصوير
-        </p>
-      </div>
-
-      {/* التصنيفات */}
-      <div className="flex justify-center gap-4 mb-8" data-aos="fade-up">
-        {categories.map((cat, index) => (
-          <button
-            key={index}
-            onClick={() => setFilter(cat)}
-            className={`px-4 py-2 rounded-full border transition ${
-              filter === cat
-                ? "bg-amber-600 text-white"
-                : "bg-gray-100 hover:bg-amber-100"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
-      {/* الأعمال */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {filteredWorks.map((work) => (
-          <Link href={`/works/${work.id}`} key={work.id}>
-            <div
-              className="bg-white shadow rounded-lg overflow-hidden cursor-pointer"
-              data-aos="zoom-in"
-            >
-              <img
-                src={work.img}
-                alt={work.title}
-                className="w-full h-48 object-cover hover:scale-105 transition-transform"
-              />
-              <div className="p-4 me-dir">
-                <h3 className="text-lg font-bold">{work.title}</h3>
-                <span className="text-sm text-gray-500">{work.category}</span>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div className="container mx-auto px-4 py-10 me-dir">
+      <img
+        src={work.img}
+        alt={work.title}
+        className="w-full max-w-3xl mx-auto rounded-lg shadow"
+      />
+      <h1 className="text-3xl font-bold mt-6">{work.title}</h1>
+      <p className="text-gray-500 mb-4">{work.category}</p>
+      <p>{work.description}</p>
     </div>
   );
 }
