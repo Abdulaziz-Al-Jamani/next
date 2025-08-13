@@ -10,109 +10,109 @@ const works = [
     id: 1,
     title: "تصميم موقع شركة",
     category: "تصميم",
-    img: "https://picsum.photos/300/200?random=",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 2,
     title: "تطبيق متجر إلكتروني",
     category: "برمجة",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 3,
     title: "هوية بصرية",
     category: "تصميم",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 4,
     title: "تطوير لوحة تحكم",
     category: "برمجة",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 5,
     title: "حملة إعلانية",
     category: "تسويق",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 6,
     title: "تصميم شعار",
     category: "تصميم",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 7,
     title: "موقع تعليمي",
     category: "برمجة",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 8,
     title: "تصوير منتجات",
     category: "تصوير",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 9,
     title: "حملة سوشيال ميديا",
     category: "تسويق",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 10,
     title: "موقع طبي",
     category: "برمجة",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 11,
     title: "تصميم واجهات",
     category: "تصميم",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 12,
     title: "تطوير API",
     category: "برمجة",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 13,
     title: "مونتاج فيديو",
     category: "تصوير",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 14,
     title: "تحسين SEO",
     category: "تسويق",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 15,
     title: "تصميم بروشور",
     category: "تصميم",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 16,
     title: "تطوير متجر",
     category: "برمجة",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 17,
     title: "جلسة تصوير",
     category: "تصوير",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 18,
     title: "إعلانات Google",
     category: "تسويق",
-    img: "https://picsum.photos/300/200?random=3",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -140,7 +140,10 @@ export default function Portfolio() {
       </div>
 
       {/* التصنيفات */}
-      <div className="flex justify-center gap-4 mb-8" data-aos="fade-up">
+      <div
+        className="flex justify-center gap-4 mb-8 flex-wrap"
+        data-aos="fade-up"
+      >
         {categories.map((cat, index) => (
           <button
             key={index}

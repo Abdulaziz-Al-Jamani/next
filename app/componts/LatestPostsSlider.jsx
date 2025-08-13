@@ -11,7 +11,7 @@ const posts = [
       "تعرف على أفضل الطرق لتطوير مهاراتك البرمجية وتعلم تقنيات جديدة باستمرار.",
     image:
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    href: "/posts/1", // رابط التدوينة
+    href: "/Posts/1", // رابط التدوينة
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const posts = [
       "لماذا يجب أن تهتم بتصميم موقعك ليكون متجاوبًا مع جميع الأجهزة وكيف تبدأ.",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-    href: "/posts/2",
+    href: "/Posts/2",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const posts = [
       "أفضل الأدوات التي تساعدك على زيادة إنتاجيتك وتنظيم وقتك بشكل فعال.",
     image:
       "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
-    href: "/posts/3",
+    href: "/Posts/3",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const posts = [
       "حافظ على موقعك آمناً من الهجمات السيبرانية باتباع هذه النصائح الهامة.",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    href: "/posts/4",
+    href: "/Posts/4",
   },
 ];
 
