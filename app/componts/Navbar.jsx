@@ -26,8 +26,8 @@ export default function Navbar() {
               <Link href="/projects" className="hover:text-amber-900">
                 المشاريع
               </Link>
-              <Link href="/contact" className="hover:text-amber-900">
-                تواصل
+              <Link href="/post" className="hover:text-amber-900">
+                التدوينات
               </Link>
             </div>
 
@@ -60,8 +60,8 @@ export default function Navbar() {
             <Link href="/projects" className="block hover:text-amber-900">
               المشاريع
             </Link>
-            <Link href="/contact" className="block hover:text-amber-900">
-              تواصل
+            <Link href="/post" className="block hover:text-amber-900">
+              التدوينات
             </Link>
           </div>
         )}
